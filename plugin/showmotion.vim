@@ -52,7 +52,6 @@ nnoremap <silent> <Plug>(show-motion-e)
       \:call showmotion#Highe()<CR>
 nnoremap <silent> <Plug>(show-motion-E) 
       \:<C-u>execute "normal!" v:count1 . "E"<CR>
-      \:<C-u>normal! E<CR>
       \:call showmotion#HighE()<CR>
 
 nnoremap <silent> <Plug>(show-motion-both-w) 
