@@ -23,38 +23,39 @@ endfunction
 
 "----- Big moves {{{
 function! showmotion#HighW() abort
-  let s:big_id = matchadd( "ShowMotion_BigMotionGroup", '\(\s\)\@<=\S\%'.line('.').'l\%>'.(col('.')).'c' )
+  let s:big_id = matchadd( "ShowMotion_BigMotionGroup", '\(\s\)\@<=\S\%'.line('.').'l\%>'.(col('.')+1).'c' )
 endfunction
 
 function! showmotion#HighB() abort
-  let s:big_id = matchadd( "ShowMotion_BigMotionGroup", '\(\s\)\@<=\S\%'.line('.').'l\%<'.(col('.')+2).'c' )
+  let s:big_id = matchadd( "ShowMotion_BigMotionGroup", '\(\s\)\@<=\S\%'.line('.').'l\%<'.(col('.')+1).'c' )
 endfunction
 
 function! showmotion#HighE() abort
-  let s:big_id = matchadd( "ShowMotion_BigMotionGroup", '\(\S\ze\s\)\%'.line('.').'l\%>'.(col('.')).'c' )
+  let s:big_id = matchadd( "ShowMotion_BigMotionGroup", '\(\S\ze\s\)\%'.line('.').'l\%>'.(col('.')+2).'c' )
 endfunction
 
 function! showmotion#HighgE() abort
-  let s:big_id = matchadd( "ShowMotion_BigMotionGroup", '\(\S\ze\s\)\%'.line('.').'l\%<'.(col('.')+2).'c' )
+  let s:big_id = matchadd( "ShowMotion_BigMotionGroup", '\(\S\ze\s\)\%'.line('.').'l\%<'.(col('.')+1).'c' )
 endfunction
 " }}}
 
 "----- Small moves {{{
 function! showmotion#Highw() abort
   " thanks to sakkemo from #vim on irc.freenode.org who found the good regexp
-  let s:small_id = matchadd( "ShowMotion_SmallMotionGroup", '\(\<\k\|\>\S\|\s\zs\S\)\%'.line('.').'l\%>'.(col('.')).'c' )
+  let s:small_id = matchadd( "ShowMotion_SmallMotionGroup", '\(\<\k\|\>\S\|\s\zs\S\)\%'.line('.').'l\%>'.(col('.')+1).'c' )
 endfunction
 
 function! showmotion#Highb() abort
-  let s:small_id = matchadd( "ShowMotion_SmallMotionGroup", '\(\<\k\|\>\S\|\s\zs\S\)\%'.line('.').'l\%<'.(col('.')+2).'c' )
+  let s:small_id = matchadd( "ShowMotion_SmallMotionGroup", '\(\<\k\|\>\S\|\s\zs\S\)\%'.line('.').'l\%<'.(col('.')+1).'c' )
 endfunction
 
 function! showmotion#Highe() abort
-  let s:small_id = matchadd( "ShowMotion_SmallMotionGroup", '\(\k\>\|\S\<\|\S\ze\s\)\%'.line('.').'l\%>'.(col('.')).'c' )
+  " there is a bug here with the col offset, in some cases the cursor is highlighted
+  let s:small_id = matchadd( "ShowMotion_SmallMotionGroup", '\(\k\>\|\S\<\|\S\ze\s\)\%'.line('.').'l\%>'.(col('.')+1).'c' )
 endfunction
 
 function! showmotion#Highge() abort
-  let s:small_id = matchadd( "ShowMotion_SmallMotionGroup", '\(\k\>\|\S\<\|\S\ze\s\)\%'.line('.').'l\%<'.(col('.')+2).'c' )
+  let s:small_id = matchadd( "ShowMotion_SmallMotionGroup", '\(\k\>\|\S\<\|\S\ze\s\)\%'.line('.').'l\%<'.(col('.')+1).'c' )
 endfunction
 " }}}
 
