@@ -33,6 +33,10 @@ endfunction
 function! showmotion#HighE() abort
   let s:big_id = matchadd( "ShowMotion_BigMotionGroup", '\(\S\ze\s\)\%'.line('.').'l\%>'.(col('.')).'c' )
 endfunction
+
+function! showmotion#HighgE() abort
+  let s:big_id = matchadd( "ShowMotion_BigMotionGroup", '\(\S\ze\s\)\%'.line('.').'l\%<'.(col('.')+2).'c' )
+endfunction
 " }}}
 
 "----- Small moves {{{
@@ -47,6 +51,10 @@ endfunction
 
 function! showmotion#Highe() abort
   let s:small_id = matchadd( "ShowMotion_SmallMotionGroup", '\(\k\>\|\S\<\|\S\ze\s\)\%'.line('.').'l\%>'.(col('.')).'c' )
+endfunction
+
+function! showmotion#Highge() abort
+  let s:small_id = matchadd( "ShowMotion_SmallMotionGroup", '\(\k\>\|\S\<\|\S\ze\s\)\%'.line('.').'l\%<'.(col('.')+2).'c' )
 endfunction
 " }}}
 

@@ -8,9 +8,9 @@ set cpo&vim
 
 "----- Highlights {{{
 function! s:SetHighlight() abort
-  highlight ShowMotion_SmallMotionGroup cterm=underline ctermfg=196 ctermbg=none
-  highlight ShowMotion_BigMotionGroup   cterm=underline ctermfg=196 ctermbg=none
-  highlight ShowMotion_CharSearchGroup  cterm=italic,bold           ctermbg=4  gui=italic,bold           guibg=#3f6691
+  highlight ShowMotion_SmallMotionGroup cterm=underline
+  highlight ShowMotion_BigMotionGroup   cterm=underline
+  highlight ShowMotion_CharSearchGroup  cterm=underline ctermfg=3
 endfunction
 call s:SetHighlight()
 augroup showmotion-highlight
@@ -53,6 +53,12 @@ nnoremap <silent> <Plug>(show-motion-e)
 nnoremap <silent> <Plug>(show-motion-E) 
       \:<C-u>execute "normal!" v:count1 . "E"<CR>
       \:call showmotion#HighE()<CR>
+nnoremap <silent> <Plug>(show-motion-ge) 
+      \:<C-u>execute "normal!" v:count1 . "ge"<CR>
+      \:call showmotion#Highge()<CR>
+nnoremap <silent> <Plug>(show-motion-gE) 
+      \:<C-u>execute "normal!" v:count1 . "gE"<CR>
+      \:call showmotion#HighgE()<CR>
 
 nnoremap <silent> <Plug>(show-motion-both-w) 
       \:<C-u>execute "normal!" v:count1 . "w"<CR>
@@ -78,6 +84,14 @@ nnoremap <silent> <Plug>(show-motion-both-E)
       \:<C-u>execute "normal!" v:count1 . "E"<CR>
       \:call showmotion#Highe()<CR>
       \:call showmotion#HighE()<CR>
+nnoremap <silent> <Plug>(show-motion-both-ge) 
+      \:<C-u>execute "normal!" v:count1 . "ge"<CR>
+      \:call showmotion#Highge()<CR>
+      \:call showmotion#HighgE()<CR>
+nnoremap <silent> <Plug>(show-motion-both-gE) 
+      \:<C-u>execute "normal!" v:count1 . "gE"<CR>
+      \:call showmotion#Highge()<CR>
+      \:call showmotion#HighgE()<CR>
 
 nnoremap <silent> <Plug>(show-motion-f) 
       \:<C-u>call showmotion#FindChar( 0, "forward", v:count1)<CR>
