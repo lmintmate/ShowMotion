@@ -15,8 +15,15 @@ Installation:
 
  I suggest using [pathogen](https://github.com/tpope/vim-pathogen)
 
+Add the highlighting settings for the groups `ShowMotion_SmallMotionGroup`, `ShowMotion_BigMotionGroup` and `ShowMotion_CharSearchGroup` to your vimrc, for example:
 
-Add these word-motion settings to your vimrc:  
+```
+highlight ShowMotion_SmallMotionGroup cterm=italic                ctermbg=53 gui=italic                guibg=#00cdcd
+highlight ShowMotion_BigMotionGroup   cterm=italic,bold,underline ctermbg=54 gui=italic,bold,underline guibg=#ff6347
+highlight ShowMotion_CharSearchGroup  cterm=italic,bold           ctermbg=4  gui=italic,bold           guibg=#4f94cd
+```
+
+Add these word-motion settings to your vimrc, either the first or the second group (depending on your preferences):  
 
     "*** Highlights both big and small motions
     nmap w <Plug>(show-motion-both-w)
@@ -48,11 +55,6 @@ Add these character-motion settings to your vimrc:
 Known limitations:
 
 * `E` fails on highlighting the last character in the line
-
-
-Errors on update?  
-* A gif was pushed on the repo, I realized it wasn't a good idea, thus I removed it from the repo and its history. The internet says this may cause some troubles.
-* I changed the function's names, hence mappings need to be updated.
 
 Thanks:
  
