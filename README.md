@@ -1,5 +1,4 @@
-ShowMotion
-==========
+# ShowMotion
 
 Ever hammered the {`w`,`W`,`b`,`B`,`e`,`E`,`;`,`,`} keys to finally pass over the location you were aiming for?  
 ShowMotion is a tiny vim plugin to highlight the potential landing places when moving:
@@ -9,11 +8,17 @@ ShowMotion is a tiny vim plugin to highlight the potential landing places when m
 
 Somewhat inspired by the EasyMotion plugin, this one is only aimed at providing cues about where you'll land, not allowing to select a specific landing place. The pleasant consequence of this is it doesn't break your moving flow, which was the motivation for writing it.
 
- ![Demo](https://i.imgur.com/sWUqiF3.gif)
+ Demo: https://imgur.com/sWUqiF3
 
-Installation:
+## Installation:
 
- I suggest using [pathogen](https://github.com/tpope/vim-pathogen)
+Plugin Manager  | Add to your `/.vimrc`
+--------------- | --------------------------------------------------
+Vim Plug        | `Plug 'lmintmate/ShowMotion'`
+NeoBundle       | `NeoBundle 'lmintmate/ShowMotion'`
+Vundle          | `Plugin 'lmintmate/ShowMotion'`
+ 
+ ## Configuration
 
 Add the highlighting settings for the groups `ShowMotion_SmallMotionGroup`, `ShowMotion_BigMotionGroup` and `ShowMotion_CharSearchGroup` to your vimrc, for example:
 
