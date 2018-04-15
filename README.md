@@ -1,9 +1,9 @@
 # ShowMotion
 
-Ever hammered the {`w`,`W`,`b`,`B`,`e`,`E`,`;`,`,`} keys to finally pass over the location you were aiming for?  
+Ever hammered the {`w`,`W`,`b`,`B`,`e`,`E`,`ge`,`gE`,`;`,`,`} keys to finally pass over the location you were aiming for?  
 ShowMotion is a tiny vim plugin to highlight the potential landing places when moving:
 
-* by words with {`w`,`W`,`b`,`B`,`e`,`E`}.
+* by words with {`w`,`W`,`b`,`B`,`e`,`E`,`ge`,`gE`}.
 * by chars with {`f`,`F`,`t`,`T`,`;`,`,`}
 
 Somewhat inspired by the EasyMotion plugin, this one is only aimed at providing cues about where you'll land, not allowing to select a specific landing place. The pleasant consequence of this is it doesn't break your moving flow, which was the motivation for writing it.
@@ -37,6 +37,8 @@ Add these word-motion settings to your vimrc, either the first or the second gro
     nmap B <Plug>(show-motion-both-B)
     nmap e <Plug>(show-motion-both-e)
     nmap E <Plug>(show-motion-both-E)
+    nmap ge <Plug>(show-motion-both-ge)
+    nmap gE <Plug>(show-motion-both-gE)
 
     "*** Only highlights motions corresponding to the one you typed
     nmap w <Plug>(show-motion-w)
@@ -45,6 +47,8 @@ Add these word-motion settings to your vimrc, either the first or the second gro
     nmap B <Plug>(show-motion-B)
     nmap e <Plug>(show-motion-e)
     nmap E <Plug>(show-motion-E)
+    nmap ge <Plug>(show-motion-ge)
+    nmap gE <Plug>(show-motion-gE)
 
 Add these character-motion settings to your vimrc:  
 
