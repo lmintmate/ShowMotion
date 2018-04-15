@@ -20,14 +20,6 @@ Vundle          | `Plugin 'lmintmate/ShowMotion'`
  
  ## Configuration
 
-Add the highlighting settings for the groups `ShowMotion_SmallMotionGroup`, `ShowMotion_BigMotionGroup` and `ShowMotion_CharSearchGroup` to your vimrc, for example:
-
-```
-highlight ShowMotion_SmallMotionGroup cterm=italic                ctermbg=53 gui=italic                guibg=#00cdcd
-highlight ShowMotion_BigMotionGroup   cterm=italic,bold,underline ctermbg=54 gui=italic,bold,underline guibg=#ff6347
-highlight ShowMotion_CharSearchGroup  cterm=italic,bold           ctermbg=4  gui=italic,bold           guibg=#4f94cd
-```
-
 Add these word-motion settings to your vimrc, either the first or the second group (depending on your preferences):  
 
     "*** Highlights both big and small motions
