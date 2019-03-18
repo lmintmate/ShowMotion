@@ -15,8 +15,12 @@ Somewhat inspired by the EasyMotion plugin, this one is only aimed at providing 
 Plugin Manager  | Add to your `/.vimrc`
 --------------- | --------------------------------------------------
 Vim Plug        | `Plug 'lmintmate/ShowMotion'`
-NeoBundle       | `NeoBundle 'lmintmate/ShowMotion'`
+dein.vim        | `call dein#add('lmintmate/ShowMotion')`
+minpac          | `call minpac#add('lmintmate/ShowMotion')`
+vim-packager    | `call packager#add('lmintmate/ShowMotion')`
+plugpac         | `Pack 'lmintmate/ShowMotion'`
 Vundle          | `Plugin 'lmintmate/ShowMotion'`
+NeoBundle       | `NeoBundle 'lmintmate/ShowMotion'`
  
  ## Configuration
 
